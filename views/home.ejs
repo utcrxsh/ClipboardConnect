@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Big Input Field with Submit Button</title>
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <style>
+    textarea:focus {
+        
+            outline: none;}
+    .w100{
+        width: 100%!important;
+        height: 3rem;
+    }
+   .out {
+    height: 290px;
+    border-radius: 10px;
+    padding: 10px;
+    border: 5px solid pink;
+    width: calc(100% - 26px); /* Reduce width by considering the border and padding */
+    margin: 0; /* Remove default margins */
+  }
+
+  .bor {
+    padding: 1rem;
+    padding-right: 1rem;
+  }
+
+  .endd {
+    text-align: right;
+    justify-content: right;
+  }
+
+  .rand {
+    border-radius: 5px;
+    height: 2.4rem;
+  }
+    body{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        
+            background-color: #ffffff; /* Light gray background color */
+
+    }
+    /* For Webkit based browsers */
+textarea::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #888; /* Thumb color */
+    border-radius: 16px; /* Border radius */
+}
+  </style>
+</head>
+<body>
+    <h1 class="font-weight-light text-center p-xl-5">Copy Paste</h1>
+  <!-- <div class="container"> -->
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="form-group">
+          <textarea class="form-control-lg w100 out"  id="contentInput" placeholder="Enter something here..." ></textarea>
+        </div>
+        <button onclick="generateAndShare()" type="submit" class="btn btn-outline-info butt" data-mdb-ripple-color="dark">Submit</button>
+    <hr class="font-weight-bold"><div class="endd">
+            <input type="number" id="randomNumberInput" class="rand" placeholder="Enter the number">
+        <button onclick="retrieveContent()" class="btn btn-success">Retrieve Content</button>
+         </div>
+      </div>
+    <!-- </div> -->
+  </div><br>
+
+
+ 
+  <script src="home.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856g0iEzlgz+tT9t6AuU82a9q7gFldxf2w4uk0YnD95s+J71Ga2qVLkP6J7" crossorigin="anonymous"></script>
+</body>
+</html>
+
