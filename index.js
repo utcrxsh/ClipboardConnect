@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
 //database 
-mongoose.connect(process.env.db, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://utkarshnautiyal321:Utkarsh321@cluster1.2tjddly.mongodb.net/contentDB", { useNewUrlParser: true, useUnifiedTopology: true });
 const contentSchema = new mongoose.Schema({
     content: String,
     randomNumber: Number
